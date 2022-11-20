@@ -2,17 +2,9 @@
 
 I am an alchemist.
 
-I am not a warrior, I don't fight like a warrior.
+I build tools to help people achieve their goals. 
 
-But I provide tools, weapons, potions, and magic to help people.
-
-I made warriors fight effectively.
-
-I help farmers grow their foods.
-
-I help everyone through the art of Alchemy.
-
-My tools are explosive, dangerous, and reactive. But it serves you well like no other.
+I believe, a good tool not only increases productivity but also changes and transforms people.
 
 # What I Create
 
