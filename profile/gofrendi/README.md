@@ -7,3 +7,4 @@ This directory contains non-private personal notes.
 # My Writing
 
 - [LLM Agent Experiment](./llm-agent-experiment/README.md)
+- [LLM Agent with Knowledgebase](./llm-agent-with-amazon-knowledgebase/README.md)
