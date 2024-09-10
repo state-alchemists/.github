@@ -5,7 +5,7 @@ Alpine is commonly used as base image because of its small size. However, Alpine
 - It uses `musl` instead of `glibc`.
 - It has `libc6-compat` for `glibc` compatibility.
 
-Thus, any executable that rely on `glibc` and not supported by `libc6-compat` will surely failed.
+Thus, any executable that relies on `glibc` and not supported by `libc6-compat` will surely failed.
 
 # The code
 
