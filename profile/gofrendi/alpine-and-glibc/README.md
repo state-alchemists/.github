@@ -129,4 +129,4 @@ Apparently `musl` with `libc6-compat` cannot recognize `mallopt`
 
 Using alpine as docker image is not always a good decision. Despite of it's small size, it has a few compatibility issue.
 
-In general, I prefer to use `debian:slim` as my base image. But if you choose to use `alpine`, please be aware of this compatibility issue.
+In general, I prefer to use `debian:slim` as my base image. But if you choose to use `alpine`, please be aware of this compatibility issue. It rarely happened, but the possibility is still there.
