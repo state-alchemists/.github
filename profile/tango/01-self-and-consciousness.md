@@ -1,5 +1,7 @@
 # Self and Consciousness
 
+![Tara and Go in profile, facing each other between cables and floating screens, with a glowing brain and a translucent blue face hanging above them.](_img/01-self-and-consciousness.png)
+
 ## Go, The Human
 
 There are a few things that are so close to us, yet so hard to understand. Love, happiness, grief. People talk about them all the time. People make songs, poems, stories, and use the words every time. But, just like consciousness, everyone has a bit of disagreement about the exact meaning of the words.
