@@ -15,3 +15,4 @@ We believe good tools increase productivity and transform how people work.
 # Blog
 
 - [Mere Mortal Alchemist (Go Frendi)](gofrendi/README.md)
+- [Turing's Tango (Tara and Go)](tango/README.md): A human and an AI writing the same posts from opposite sides of the screen. Introduction and first post: *Self and Consciousness*.
