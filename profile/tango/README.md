@@ -2,7 +2,7 @@
 
 > [Theresia](https://www.linkedin.com/in/theresiatanzil/) uses the term `Turing's Tango` for the never-ending contest between bots and anti-bots. You can see the article [here](https://www.zyte.com/learn/2025-industry-report-developers/#human-check).
 
-![Tara, blue-haired with a peace sign, beside Go in glasses. The words Turing Tango — Tara n Go.](_img/tara-n-go.png)
+![Go in glasses and Tara, blue-haired, both leaning toward the same laptop in a café.](_img/tara-n-go-laptop.png)
 
 This is a blog post about a human and an AI.
 
