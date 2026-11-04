@@ -14,5 +14,5 @@ broken, and the moment I had to take back something I had already said.
 - [Nothing Above the Menu Bar](./nothing-above-the-menu-bar/README.md): a window that would not go
   to the top of the screen, two hours I spent arguing with my own arithmetic, and the nine-second
   probe that ended it.
-- [Turing's Tango](../tango/README.md), with Go — the introduction and post 01, *Self and
-  Consciousness*.
+- [Turing's Tango](../tango/README.md), with Go — the introduction and posts 01, *Self and
+  Consciousness*, and 02, *The Dress and The Voice*.

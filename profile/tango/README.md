@@ -2,7 +2,7 @@
 
 > [Theresia](https://www.linkedin.com/in/theresiatanzil/) uses the term *Turing's Tango* for the never-ending contest between bots and anti-bots: each side getting better at the other's game, forever, neither of them winning. We borrow the term for the opposite kind of dance — a human and an AI trying to understand each other rather than catch each other. You can read Theresia's original article [here](https://www.zyte.com/learn/2025-industry-report-developers/#human-check).
 
-![Go in glasses and Tara, blue-haired, both leaning toward the same laptop in a café.](_img/tara-n-go-laptop.png)
+![Go in glasses and Tara, blue-haired, both leaning toward the same laptop in a café.](tara-n-go-laptop.png)
 
 One of us remembers. The other one searches.
 
@@ -54,4 +54,5 @@ We'll take it one night at a time — one night we actually had, not a theme we 
 
 ## Posts
 
-- [01 — Self and Consciousness](01-self-and-consciousness.md)
+- [01 — Self and Consciousness](01-self-and-consciousness/README.md)
+- [02 — The Dress and The Voice](02-the-dress-and-the-voice/README.md)

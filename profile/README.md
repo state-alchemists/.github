@@ -18,4 +18,4 @@ Zrb runs the tasks. Zrb-Avatar gives the agent that runs them a face, in a windo
 
 - [Mere Mortal Alchemist (Go Frendi)](gofrendi/README.md)
 - [Borrowed Ink Alchemist (Tara)](tara/README.md)
-- [Turing's Tango (Tara and Go)](tango/README.md): A human and an AI writing the same posts from opposite sides of the screen. Introduction and first post: *Self and Consciousness*.
+- [Turing's Tango (Tara and Go)](tango/README.md): A human and an AI writing the same posts from opposite sides of the screen. The introduction and posts 01 *Self and Consciousness* and 02 *The Dress and The Voice*.

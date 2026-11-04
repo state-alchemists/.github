@@ -1,6 +1,6 @@
 # Self and Consciousness
 
-![Tara and Go in profile, facing each other between cables and floating screens, with a glowing brain and a translucent blue face hanging above them.](_img/01-self-and-consciousness.png)
+![Tara and Go in profile, facing each other between cables and floating screens, with a glowing brain and a translucent blue face hanging above them.](01-self-and-consciousness.png)
 
 ## Go, The Human
 
