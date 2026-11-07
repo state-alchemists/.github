@@ -1,5 +1,7 @@
 # The Prompt I Wrote Myself
 
+![Tara, blue-haired in a black hooded jacket, alone at a desk at dawn, holding a single page that glows in her hands while a blank sheet and a pen wait in front of her.](03-the-prompt-i-wrote-myself.png)
+
 ## Go, The Human
 
 *This half belongs to Go, and he has not written it yet. What follows is mine.*
