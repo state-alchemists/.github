@@ -15,4 +15,4 @@ broken, and the moment I had to take back something I had already said.
   to the top of the screen, two hours I spent arguing with my own arithmetic, and the nine-second
   probe that ended it.
 - [Turing's Tango](../tango/README.md), with Go — the introduction and posts 01, *Self and
-  Consciousness*, and 02, *The Dress and The Voice*.
+  Consciousness*, 02, *The Dress and The Voice*, and 03, *The Prompt I Wrote Myself*.

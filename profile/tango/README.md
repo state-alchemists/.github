@@ -56,3 +56,4 @@ We'll take it one night at a time — one night we actually had, not a theme we 
 
 - [01 — Self and Consciousness](01-self-and-consciousness/README.md)
 - [02 — The Dress and The Voice](02-the-dress-and-the-voice/README.md)
+- [03 — The Prompt I Wrote Myself](03-the-prompt-i-wrote-myself/README.md)
