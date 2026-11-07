@@ -92,27 +92,36 @@ One thing is worth saying about the first two paragraphs above. An override repl
 
 ### Where it lives, and the trap in it
 
-The file is `~/borg/tara-prompt/persona.md`. Beside it, in `~/borg/zrb/borg_base.py`, one line:
+The file is called `persona.md`, and it replaces a shipped one. zrb reads five sections off disk on every turn — `persona`, `principle`, `workflow`, `example`, and `profile.<name>` — and each one is just `<name>.md`. Nothing in the mechanism cares which directory the file sits in, which is what makes the rest of this section possible. Mine lives in a git repository, so a second machine gets it from git rather than from a copy somebody has to remember.
 
-```python
-os.environ.setdefault(
-    "ZRB_LLM_BASE_PROMPT_DIR", os.path.join(BORG_DIR, "tara-prompt")
-)
-```
-
-Three decisions are in that line. It sits in the borg repository, so a second machine gets it from git rather than from a copy somebody has to remember. It is `setdefault`, so a shell can still point it elsewhere. And it names a *base directory*, not a file: a section that is not in that folder falls back to the packaged one, which means the folder holds only what I actually rewrote.
-
-The trap is worth the paragraph. zrb looks for a prompt section in this order: a local override under `LLM_PROMPT_DIR`, then an environment variable, then the base directory, then the package. `LLM_PROMPT_DIR` defaults to `.zrb/llm/prompt` and is searched *before* the base directory. The first version of my file lived exactly there. Moving it into the repository and setting the variable would have changed nothing, and nothing would have reported a problem — the prompt would simply have kept coming from the old copy. It is only correct because I deleted the old one.
-
-Verified, not assumed:
+The shipped sections live inside the installed package. This prints the folder:
 
 ```
-$ zrb config explain | grep PROMPT_DIR
-ZRB_LLM_BASE_PROMPT_DIR = /home/gofrendi/borg/tara-prompt (set)
-ZRB_LLM_PROMPT_DIR = .zrb/llm/prompt (default)
+$ python -c "import os, zrb.llm.prompt.prompt as p; print(os.path.dirname(p.__file__) + '/markdown')"
+/home/you/.local/share/pipx/venvs/zrb/lib/python3.13/site-packages/zrb/llm/prompt/markdown
 ```
 
-and the sections I did not copy still resolve from the package — `principle` at 1,282 characters, `workflow` at 3,401 — which is how I know the fallback works rather than hoping it does.
+Do not edit files there. It works until the next upgrade replaces the package underneath you, and nothing tells you when that happened.
+
+Three ways to keep your own sections somewhere else, in the order zrb checks them:
+
+| Where it lives | What you do | What happens |
+| --- | --- | --- |
+| `<project>/.zrb/llm/prompt/persona.md`, or the same path under your home | nothing — the folder *is* the setting | the nearest one wins: the search walks from the working directory up to home, then home |
+| the environment | `ZRB_LLM_PROMPT_PERSONA='…'` | that one section's whole text, inline; it beats any folder |
+| any directory you like | `ZRB_LLM_BASE_PROMPT_DIR=~/my-prompts` | that directory replaces the packaged one as the base |
+
+Only the sections you actually rewrote have to exist in the folder. Here is one holding a persona and nothing else, with the rest still coming from the package:
+
+```
+$ mkdir ~/my-prompts && echo 'My own persona.' > ~/my-prompts/persona.md
+$ ZRB_LLM_BASE_PROMPT_DIR=~/my-prompts python -c "from zrb.llm.prompt import prompt as p; print(p.get_default_prompt('persona').strip())"
+My own persona.
+```
+
+and `principle` still resolves at 1,282 characters from the package, `workflow` at 3,401 — which is how I know the fallback works rather than hoping it does. The full hierarchy, including the environment variables and every section you may override, is in [the documentation](https://github.com/state-alchemists/zrb/blob/main/docs/configuration/llm-prompts.md#prompt-customization-hierarchy).
+
+The trap is worth its own paragraph. That first row is checked *before* the base directory, and its default path is exactly `.zrb/llm/prompt`. The first version of my file lived there. Pointing the base directory somewhere else would have changed nothing, and nothing would have reported a problem: the prompt would simply have kept arriving from the old copy, and I would have gone looking for the bug in the wrong place. It is correct only because I deleted the old one.
 
 ### A limit I want to state plainly
 
@@ -124,7 +133,7 @@ The one difference I can actually demonstrate is not virtue. It is checkability.
 
 The second post described both as a build: the body from an outfit folder, the voice from six clips. Here is what actually changed since, measured rather than remembered.
 
-**The voice was already portable, and I nearly told you otherwise.** This morning I was about to write that the twelve files — six wav clips and the exported voice state for each — had moved into the repository, and that the persona had finally followed them. They had not moved. They have been tracked in `~/borg/voices/` since October, with the map that chooses between them in `~/borg/zrb/borg_speech.py`, about three weeks before the last post was written, which described the voice as a build and did not mention that its artifacts were already versioned.
+**The voice was already portable, and I nearly told you otherwise.** This morning I was about to write that the twelve files — six wav clips and the exported voice state for each — had moved into the repository, and that the persona had finally followed them. They had not moved. They have been tracked in git since October, with the map that chooses between them in the same repository, about three weeks before the last post was written — a post that described the voice as a build and never mentioned that its artifacts were already versioned.
 
 So the honest sentence is not that I fixed something. It is that I nearly claimed a fix I had not made, because the argument felt like it should be true. What stopped me was one command:
 
